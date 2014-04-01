@@ -31,4 +31,3 @@ imap <C-j> <DOWN>
 " cancel searched highlight
 noremap <leader>. :nohlsearch<CR>
 map <C-A> ggVG
-
