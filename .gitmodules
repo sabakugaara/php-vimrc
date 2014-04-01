@@ -13,3 +13,9 @@
 [submodule "bundle/vim-surround"]
 	path = bundle/vim-surround
 	url = https://github.com/tpope/vim-surround.git
+[submodule "bundle/vim-addon-mw-util"]
+	path = bundle/vim-addon-mw-util
+	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
+[submodule "bundle/vim-tlib"]
+	path = bundle/vim-tlib
+	url = https://github.com/tomtom/tlib_vim.git
