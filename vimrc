@@ -31,3 +31,6 @@ imap <C-j> <DOWN>
 " cancel searched highlight
 noremap <leader>. :nohlsearch<CR>
 map <C-A> ggVG
+set fileencoding=gbk
+set fileencodings=utf-8,gbk
+set fileformats=dos,unix
