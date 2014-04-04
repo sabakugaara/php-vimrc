@@ -1,4 +1,4 @@
-runtime bundle/vim-pathogen/autoload/pathogen.vim " ç»å¯¹è·¯å¾„æœ‰é—®é¢˜, æ”¹ä¸ºç›¸å¯¹è·¯å¾„
+runtime bundle/vim-pathogen/autoload/pathogen.vim " ¾ø¶ÔÂ·¾¶ÓĞÎÊÌâ, ¸ÄÎªÏà¶ÔÂ·¾¶
 filetype plugin indent on
 execute pathogen#infect()
 call pathogen#helptags()
@@ -18,11 +18,11 @@ set hlsearch
 noremap <CR> o<ESC>
 
 "noremap <BS> X
-"åœ¨æœ‰æŠ˜è¡Œçš„æƒ…å†µä¸‹ï¼Œéœ€è¦ gj gkæ¥ä¸Šä¸‹ç§»åŠ¨
+"ÔÚÓĞÕÛĞĞµÄÇé¿öÏÂ£¬ĞèÒª gj gkÀ´ÉÏÏÂÒÆ¶¯
 map j gj
 map k gk
 
-"æ’å…¥æ¨¡å¼ä¸‹çš„é¼ æ ‡ç§»åŠ¨
+"²åÈëÄ£Ê½ÏÂµÄÊó±êÒÆ¶¯
 imap <C-h> <LEFT>
 imap <C-l> <RIGHT>
 imap <C-k> <UP>  
@@ -34,3 +34,4 @@ map <C-A> ggVG
 set fileencoding=gbk
 set fileencodings=utf-8,gbk
 set fileformats=dos,unix
+set laststatus=2
