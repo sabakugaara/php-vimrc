@@ -7,7 +7,7 @@ filetype plugin indent on
 
 let mapleader = ","
 set nocompatible
-
+set backspace=indent,eol,start
 set expandtab
 set tabstop=4
 set shiftwidth=4
@@ -35,10 +35,11 @@ map <C-A> ggVG
 nmap <leader>es :tabedit ~/.vimrc<CR>
 nmap <leader>ss :source ~/.vimrc<CR>
 noremap <CR> o<ESC>
-"插入模式下的鼠标移动
-imap <C-h> <LEFT>
-imap <C-l> <RIGHT>
-imap <C-k> <UP>  
-imap <C-j> <DOWN>
+"插入模式下的鼠标移动，这个设置可能会导致插入模式下无法用<BS>删除 <BS> = <C-H>
+"且覆盖了 很多默认快捷键
+"imap <C-h> <LEFT>
+"imap <C-l> <RIGHT>
+"imap <C-k> <UP>  
+"imap <C-j> <DOWN>
 noremap <leader>. :nohlsearch<CR>
 "noremap <BS> X
