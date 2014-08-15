@@ -3,7 +3,6 @@ filetype plugin indent on
 execute pathogen#infect()
 call pathogen#helptags()
 syntax on
-filetype plugin indent on
 
 let mapleader = ","
 set nocompatible
