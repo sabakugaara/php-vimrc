@@ -19,3 +19,6 @@
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = https://github.com/vim-scripts/Tagbar.git
+[submodule "bundle/vim-erlang"]
+	path = bundle/vim-erlang
+	url = https://github.com/jimenezrick/vimerl.git
