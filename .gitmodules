@@ -22,3 +22,9 @@
 [submodule "bundle/vim-erlang"]
 	path = bundle/vim-erlang
 	url = https://github.com/jimenezrick/vimerl.git
+[submodule "bundle/vim-colors-solarized"]
+	path = bundle/vim-colors-solarized
+	url = git@github.com:altercation/vim-colors-solarized.git
+[submodule "bundle/vim-javascript-syntax"]
+	path = bundle/vim-javascript-syntax
+	url = git@github.com:jelera/vim-javascript-syntax.git

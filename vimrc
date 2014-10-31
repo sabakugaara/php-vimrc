@@ -2,7 +2,7 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim " 绝对路径有问题, 改�
 filetype plugin indent on
 execute pathogen#infect()
 call pathogen#helptags()
-syntax on
+syntax enable
 
 let mapleader = ","
 set nocompatible
@@ -29,7 +29,7 @@ set scrolloff=3
 "在有折行的情况下，需要 gj gk来上下移动
 map j gj
 map k gk
-" cancel searched highlight
+
 map <C-A> ggVG
 nmap <leader>es :tabedit ~/.vimrc<CR>
 nmap <leader>ss :source ~/.vimrc<CR>
@@ -40,5 +40,10 @@ noremap <CR> o<ESC>
 "imap <C-l> <RIGHT>
 "imap <C-k> <UP>  
 "imap <C-j> <DOWN>
+" cancel searched highlight
 noremap <leader>. :nohlsearch<CR>
 "noremap <BS> X
+
+nmap <leader>m :Instantmd <CR>
+
+"colorscheme solarized
