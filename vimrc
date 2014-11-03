@@ -3,6 +3,10 @@ filetype plugin indent on
 execute pathogen#infect()
 call pathogen#helptags()
 syntax enable
+autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 expandtab
+
+"set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+"set list
 
 let mapleader = ","
 set nocompatible
@@ -47,3 +51,8 @@ noremap <leader>. :nohlsearch<CR>
 nmap <leader>m :Instantmd <CR>
 
 "colorscheme solarized
+" vim < 7.3
+"highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+"match OverLength /\%81v.\+/
+" vim > 7.3
+set colorcolumn=80
