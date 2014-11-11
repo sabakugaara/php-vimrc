@@ -1,14 +1,15 @@
-runtime bundle/vim-pathogen/autoload/pathogen.vim " 绝对路径有问题, 改为相对路径
 filetype plugin indent on
+syntax enable
+runtime bundle/vim-pathogen/autoload/pathogen.vim " 绝对路径有问题, 改为相对路径
 execute pathogen#infect()
 call pathogen#helptags()
-syntax enable
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 expandtab
 
 "set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 "set list
 
 let mapleader = ","
+let g:vim_markdown_folding_disabled=1
 set nocompatible
 set backspace=indent,eol,start
 set expandtab
