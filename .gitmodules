@@ -40,3 +40,9 @@
 [submodule "bundle/vim-fugitive"]
 	path = bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive
+[submodule "bundle/vim-nodejs-complete"]
+	path = bundle/vim-nodejs-complete
+	url = git@github.com:myhere/vim-nodejs-complete.git
+[submodule "bundle/autocomplpop"]
+	path = bundle/autocomplpop
+	url = git@github.com:vim-scripts/AutoComplPop.git
