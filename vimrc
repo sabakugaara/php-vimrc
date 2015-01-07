@@ -3,15 +3,16 @@ syntax enable
 runtime bundle/vim-pathogen/autoload/pathogen.vim " 绝对路径有问题, 改为相对路径
 execute pathogen#infect()
 call pathogen#helptags()
-autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 expandtab
+"autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 expandtab
 
 "set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 "set list
 
+vnorem / y/<c-r>"<cr>
 let mapleader = ","
-let g:vim_markdown_folding_disabled=1
+"let g:vim_markdown_folding_disabled=1
 set nocompatible
-set backspace=indent,eol,start
+set backspace=indent,eol,start   
 set expandtab
 set tabstop=4
 set shiftwidth=4
@@ -49,7 +50,7 @@ noremap <CR> o<ESC>
 noremap <leader>. :nohlsearch<CR>
 "noremap <BS> X
 
-nmap <leader>m :Instantmd <CR>
+"nmap <leader>m :Instantmd <CR>
 
 "colorscheme solarized
 " vim < 7.3
@@ -57,3 +58,46 @@ nmap <leader>m :Instantmd <CR>
 "match OverLength /\%81v.\+/
 " vim > 7.3
 set colorcolumn=80
+
+set nobackup
+set t_Co=256
+try 
+    colorscheme mustang
+    "colorscheme mango
+catch
+endtry
+
+" Opens an edit command with the path of the currently edited file filled in Normal mode: <Leader>ee
+map <Leader>ee :e <C-R>=expand("%:p:h") . "/" <CR>
+
+" Opens a tab edit command with the path of the currently edited file filled in
+" Normal mode: <Leader>t
+map <Leader>et :tabe <C-R>=expand("%:p:h") . "/" <CR>
+" F2 = Paste Toggle (in insert mode, pasting indented text behavior changes)
+set pastetoggle=<F2>
+" ,p = Runs PHP lint checker on current file
+map <Leader>p :! php -l %<CR>
+" ,P = Runs PHP and executes the current file
+map <Leader>P :! php -q %<CR>
+" ,v = Paste
+"map <Leader>v "+gP
+" ,c = Copy
+"map <Leader>c "+y
+
+"this work on mac
+map <Leader>v :r !pbpaste<CR>
+" just copy select line
+map <leader>c :w !pbcopy<CR><CR>
+set clipboard=unnamed
+
+set nowrap
+set fdm=indent "缩进折叠 其他可选设置 marker 默认使用 /*{{{*/和 /*}}}*/标记折叠 expr 表达式等等 
+"zM close all flods, zR reopen all flods, za open a flod,  zc close a flod ,when open a flod:  ]z折叠尾部 [z 折叠首部 zr打开
+"zj move to next flod ,zk move to previous flod
+"@see more: http://vim.wikia.com/wiki/Folding
+
+augroup vimrc
+  au BufReadPre * setlocal foldmethod=indent " auto flod when open file
+  "au BufWinEnter * if &fdm == 'indent' | setlocal foldmethod=manual | endif
+augroup END
+set paste
