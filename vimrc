@@ -17,6 +17,7 @@ set expandtab
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
+set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 
 set textwidth=80
 set number
@@ -31,6 +32,8 @@ set fileencodings=utf-8,gbk
 set fileformats=unix,dos
 set laststatus=2 "显示状态栏
 set scrolloff=3  
+set cursorcolumn
+set cursorline
 
 "在有折行的情况下，需要 gj gk来上下移动
 map j gj
@@ -79,6 +82,8 @@ set pastetoggle=<F2>
 map <Leader>p :! php -l %<CR>
 " ,P = Runs PHP and executes the current file
 map <Leader>P :! php -q %<CR>
+" ,j = Runs Node.js and executes the current file
+map <Leader>j :! node  %<CR>
 " ,v = Paste
 "map <Leader>v "+gP
 " ,c = Copy
@@ -100,4 +105,4 @@ augroup vimrc
   au BufReadPre * setlocal foldmethod=indent " auto flod when open file
   "au BufWinEnter * if &fdm == 'indent' | setlocal foldmethod=manual | endif
 augroup END
-set paste
+"set paste

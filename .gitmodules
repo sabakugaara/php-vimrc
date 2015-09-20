@@ -46,3 +46,12 @@
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = https://github.com/vim-scripts/Tagbar.git
+[submodule "bundle/emmet-vim"]
+	path = bundle/emmet-vim
+	url = git@github.com:mattn/emmet-vim.git
+[submodule "bundle/tabular"]
+	path = bundle/tabular
+	url = git://github.com/godlygeek/tabular.git
+[submodule "bundle/vim-jsbeautify"]
+	path = bundle/vim-jsbeautify
+	url = git@github.com:maksimr/vim-jsbeautify.git
