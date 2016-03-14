@@ -1,29 +1,17 @@
-filetype plugin indent on
-syntax enable
-runtime bundle/vim-pathogen/autoload/pathogen.vim " 绝对路径有问题, 改为相对路径
 execute pathogen#infect()
-call pathogen#helptags()
-"autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 expandtab
-
-"set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
-"set list
-
-vnorem / y/<c-r>"<cr>
+syntax on
+filetype plugin indent on
+set nocompatible  "去掉讨厌的有关vi一致性模式，避免以前版本的一些bug和局限
 let mapleader = ","
-"let g:vim_markdown_folding_disabled=1
-set nocompatible
-set backspace=indent,eol,start   
-set expandtab
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
-
+set backspace=indent,eol,start " 删除键能删除空行和 tab 缩进
+set expandtab " tab 转化为空格
+set tabstop=4 
+set shiftwidth=4 " << 和 >> 缩进时的列数
+set softtabstop=4 " tab 
+set autoindent
 set textwidth=80
 set number
-
 set showcmd
-
 set hlsearch
 set ignorecase
 set smartcase
@@ -32,43 +20,31 @@ set fileencodings=utf-8,gbk
 set fileformats=unix,dos
 set laststatus=2 "显示状态栏
 set scrolloff=3  
-set cursorcolumn
-set cursorline
+set cursorcolumn " 高亮光标所在列
+set cursorline " 高亮光标所在行
+set wildchar=<Tab> wildmenu wildmode=full
 
-"在有折行的情况下，需要 gj gk来上下移动
+"使用 / 搜索选中的任意单词
+vnorem / y/<c-r>"<cr>   
+set iskeyword+=_,$,@,%,#,- " 带有如下符号的单词不要被换行分割
+
+
+"在有折行的情况下，不再需要 gj gk来上下移动
 map j gj
 map k gk
 
-map <C-A> ggVG
 nmap <leader>es :tabedit ~/.vimrc<CR>
 nmap <leader>ss :source ~/.vimrc<CR>
-noremap <CR> o<ESC>
-"插入模式下的鼠标移动，这个设置可能会导致插入模式下无法用<BS>删除 <BS> = <C-H>
-"且覆盖了 很多默认快捷键
-"imap <C-h> <LEFT>
-"imap <C-l> <RIGHT>
-"imap <C-k> <UP>  
-"imap <C-j> <DOWN>
-" cancel searched highlight
+"noremap <CR> o<ESC>
 noremap <leader>. :nohlsearch<CR>
-"noremap <BS> X
 
-"nmap <leader>m :Instantmd <CR>
 
 "colorscheme solarized
-" vim < 7.3
-"highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-"match OverLength /\%81v.\+/
-" vim > 7.3
+colorscheme mustang
 set colorcolumn=80
 
 set nobackup
 set t_Co=256
-try 
-    colorscheme mustang
-    "colorscheme mango
-catch
-endtry
 
 " Opens an edit command with the path of the currently edited file filled in Normal mode: <Leader>ee
 map <Leader>ee :e <C-R>=expand("%:p:h") . "/" <CR>
@@ -95,7 +71,7 @@ map <Leader>v :r !pbpaste<CR>
 map <leader>c :w !pbcopy<CR><CR>
 set clipboard=unnamed
 
-set nowrap
+set wrap
 set fdm=indent "缩进折叠 其他可选设置 marker 默认使用 /*{{{*/和 /*}}}*/标记折叠 expr 表达式等等 
 "zM close all flods, zR reopen all flods, za open a flod,  zc close a flod ,when open a flod:  ]z折叠尾部 [z 折叠首部 zr打开
 "zj move to next flod ,zk move to previous flod
@@ -103,6 +79,37 @@ set fdm=indent "缩进折叠 其他可选设置 marker 默认使用 /*{{{*/和 /
 
 augroup vimrc
   au BufReadPre * setlocal foldmethod=indent " auto flod when open file
-  "au BufWinEnter * if &fdm == 'indent' | setlocal foldmethod=manual | endif
 augroup END
-"set paste
+
+"搜索缓冲区文件列表
+function! BufSel(pattern)
+  let bufcount = bufnr("$")
+  let currbufnr = 1
+  let nummatches = 0
+  let firstmatchingbufnr = 0
+  while currbufnr <= bufcount
+    if(bufexists(currbufnr))
+      let currbufname = bufname(currbufnr)
+      if(match(currbufname, a:pattern) > -1)
+        echo currbufnr . ": ". bufname(currbufnr)
+        let nummatches += 1
+        let firstmatchingbufnr = currbufnr
+      endif
+    endif
+    let currbufnr = currbufnr + 1
+  endwhile
+  if(nummatches == 1)
+    execute ":buffer ". firstmatchingbufnr
+  elseif(nummatches > 1)
+    let desiredbufnr = input("Enter buffer number: ")
+    if(strlen(desiredbufnr) != 0)
+      execute ":buffer ". desiredbufnr
+    endif
+  else
+    echo "No matching buffers"
+  endif
+endfunction
+
+"Bind the BufSel() function to a user-command
+command! -nargs=1 Bs :call BufSel("<args>")
+map <leader>bs :buffers<CR>:Bs<Space>
