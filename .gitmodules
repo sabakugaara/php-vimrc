@@ -28,9 +28,6 @@
 [submodule "bundle/editorconfig"]
 	path = bundle/editorconfig
 	url = git@github.com:editorconfig/editorconfig-vim.git
-[submodule "bundle/jshint2"]
-	path = bundle/jshint2
-	url = git@github.com:Shutnik/jshint2.vim.git
 [submodule "bundle/markdown"]
 	path = bundle/markdown
 	url = https://github.com/plasticboy/vim-markdown.git
