@@ -40,8 +40,9 @@ nmap <leader>ss :source ~/.vimrc<CR>
 noremap <leader>. :nohlsearch<CR>
 
 
-"colorscheme solarized
-colorscheme mustang
+set background=dark
+colorscheme solarized
+"colorscheme mustang
 set colorcolumn=80
 
 set nobackup
