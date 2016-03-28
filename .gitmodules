@@ -31,9 +31,6 @@
 [submodule "bundle/vim-nodejs-complete"]
 	path = bundle/vim-nodejs-complete
 	url = git@github.com:myhere/vim-nodejs-complete.git
-[submodule "bundle/autocomplpop"]
-	path = bundle/autocomplpop
-	url = git@github.com:vim-scripts/AutoComplPop.git
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = https://github.com/vim-scripts/Tagbar.git
