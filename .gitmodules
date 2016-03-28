@@ -16,12 +16,6 @@
 [submodule "bundle/vim-tlib"]
     path = bundle/vim-tlib
 	url = https://github.com/tomtom/tlib_vim.git
-[submodule "bundle/vim-erlang"]
-	path = bundle/vim-erlang
-	url = https://github.com/jimenezrick/vimerl.git
-[submodule "bundle/vim-colors-solarized"]
-	path = bundle/vim-colors-solarized
-	url = git@github.com:altercation/vim-colors-solarized.git
 [submodule "bundle/vim-javascript-syntax"]
 	path = bundle/vim-javascript-syntax
 	url = git@github.com:jelera/vim-javascript-syntax.git
@@ -62,3 +56,6 @@
 [submodule "bundle/vim-multiple-cursors"]
 	path = bundle/vim-multiple-cursors
 	url = git@github.com:terryma/vim-multiple-cursors.git
+[submodule "bundle/YouCompleteMe"]
+	path = bundle/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe
