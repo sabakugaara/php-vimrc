@@ -1,3 +1,4 @@
+ autocmd FileType javascript noremap <buffer>  <leader>f :call JsBeautify()<cr>
  autocmd FileType javascript vnoremap <buffer>  <leader>f :call RangeJsBeautify()<cr>
  autocmd FileType json vnoremap <buffer> <leader>f :call RangeJsonBeautify()<cr>
  autocmd FileType jsx vnoremap <buffer> <leader>f :call RangeJsxBeautify()<cr>
