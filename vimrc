@@ -10,6 +10,7 @@ set tabstop=4
 set shiftwidth=4 " << 和 >> 缩进时的列数
 set softtabstop=4 " tab 
 set autoindent
+set smartindent
 set textwidth=80
 set number
 set showcmd
