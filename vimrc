@@ -1,6 +1,7 @@
 execute pathogen#infect()
 syntax on
 au BufRead,BufNewFile *.json set filetype=json
+au BufRead,BufNewFile *.ts set filetype=typescript
 filetype plugin indent on
 set nocompatible  "去掉讨厌的有关vi一致性模式，避免以前版本的一些bug和局限
 let mapleader = ","
