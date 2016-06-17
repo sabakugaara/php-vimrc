@@ -1,1 +1,1 @@
-noremap <silent> <Leader>n :NERDTreeToggle<CR>
+"noremap <silent> <Leader>n :NERDTreeToggle<CR>
