@@ -86,6 +86,9 @@ map <Leader>c "+y
 " mvim just need this
 "set clipboard=unnamed
 
+" 删除当前编辑的文件
+nnoremap rm :call delete(expand('%')) \| bdelete!<CR>
+
 
 set wrap
 set fdm=indent "缩进折叠 其他可选设置 marker 默认使用 /*{{{*/和 /*}}}*/标记折叠 expr 表达式等等 
