@@ -31,3 +31,4 @@ php-vimrc
 - vim-snipmate 常用代码块自动补全，利用 tab 
 - vim-surround 快捷的双引号操作
 - vim-tlib 一个 vim 基础库
+- vim-ale 异步语法检查
