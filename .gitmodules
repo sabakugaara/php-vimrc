@@ -68,3 +68,6 @@
 [submodule "bundle/vim-grepper"]
 	path = bundle/vim-grepper
 	url = https://github.com/mhinz/vim-grepper.git
+[submodule "bundle/codi"]
+	path = bundle/codi
+	url = https://github.com/metakirby5/codi.vim.git

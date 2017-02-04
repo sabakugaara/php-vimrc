@@ -32,3 +32,5 @@ php-vimrc
 - vim-surround 快捷的双引号操作
 - vim-tlib 一个 vim 基础库
 - vim-ale 异步语法检查
+- vim-grepper 异步文件搜索
+- codi 更方便的 repl
