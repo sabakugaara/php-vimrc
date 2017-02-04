@@ -12,12 +12,14 @@ set shiftwidth=4 " << 和 >> 缩进时的列数
 set softtabstop=4 " tab 
 set autoindent
 set smartindent
-set textwidth=80
+set textwidth=180
 set number
 set showcmd
 set hlsearch
+set incsearch
 set ignorecase
 set smartcase
+set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8,gbk
 set fileformats=unix,dos
@@ -43,8 +45,8 @@ noremap <leader>. :nohlsearch<CR>
 
 
 set background=dark
-colorscheme solarized
-"colorscheme mustang
+"colorscheme solarized
+colorscheme mustang
 set colorcolumn=80
 
 set nobackup
@@ -64,16 +66,26 @@ map <Leader>p :! php -l %<CR>
 map <Leader>P :! php -q %<CR>
 " ,j = Runs Node.js and executes the current file
 map <Leader>j :! node  %<CR>
-" ,v = Paste
-"map <Leader>v "+gP
-" ,c = Copy
-"map <Leader>c "+y
 
+
+"""""""""""""" brew install vim 7.4 """"""""""""""""""
+" ,v = Paste
+map <Leader>v "+gP
+" ,c = Copy
+map <Leader>c "+y
+"""""""""""""" brew install vim 7.4 """"""""""""""""""
+
+"""""""""""" mac default vim 7.3"""""""""""""""""""""
+" just copy select line brew install vim 7.4 fix this problem
+"map <leader>c :w !pbcopy<CR><CR>
 "this work on mac
-map <Leader>v :r !pbpaste<CR>
-" just copy select line
-map <leader>c :w !pbcopy<CR><CR>
-set clipboard=unnamed
+"map <Leader>v :r !pbpaste<CR>
+
+"""""""""""" mac default vim 7.3"""""""""""""""""""""
+
+" mvim just need this
+"set clipboard=unnamed
+
 
 set wrap
 set fdm=indent "缩进折叠 其他可选设置 marker 默认使用 /*{{{*/和 /*}}}*/标记折叠 expr 表达式等等 
@@ -81,9 +93,9 @@ set fdm=indent "缩进折叠 其他可选设置 marker 默认使用 /*{{{*/和 /
 "zj move to next flod ,zk move to previous flod
 "@see more: http://vim.wikia.com/wiki/Folding
 
-augroup vimrc
-  au BufReadPre * setlocal foldmethod=indent " auto flod when open file
-augroup END
+"augroup vimrc
+"  au BufReadPre * setlocal foldmethod=indent " auto flod when open file
+"augroup END
 
 "搜索缓冲区文件列表
 function! BufSel(pattern)
