@@ -15,7 +15,6 @@ php-vimrc
 - emmet-vim
 - markdown 高亮 markdown 语法
 - nerdtree 文件目录列表 TODO 支持隐藏文件
-- syntastic 语法检查框架
 - tabular 等号对齐
 - typescript-vim typescript 语法检查和 omni 提示
 - vim-addon-mw-util vim-snipmate 插件依赖该插件
@@ -32,5 +31,15 @@ php-vimrc
 - vim-surround 快捷的双引号操作
 - vim-tlib 一个 vim 基础库
 - vim-ale 异步语法检查
+  - eslint js 检测 `npm i eslint -g`
+  - tidy html 检测 手动下载：http://binaries.html-tidy.org/
+  - jsonlint 
 - vim-grepper 异步文件搜索
 - codi 更方便的 repl
+- html5.vim html5 的标签支持
+- nerdcommenter  输入注释的工具
+- loremipsum 仅仅用于输入一些指定长度的占位符字符串
+
+
+
+TODO vim terminal 结合

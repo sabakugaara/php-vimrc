@@ -66,6 +66,9 @@ map <Leader>p :! php -l %<CR>
 map <Leader>P :! php -q %<CR>
 " ,j = Runs Node.js and executes the current file
 map <Leader>j :! node  %<CR>
+map <Leader>rj :Codi javascript<CR>
+map <Leader>rp :Codi php<CR>
+map <Leader>ag :GrepperAg 
 
 
 """""""""""""" brew install vim 7.4 """"""""""""""""""
@@ -90,8 +93,8 @@ map <Leader>c "+y
 nnoremap rm :call delete(expand('%')) \| bdelete!<CR>
 
 
-set wrap
-set fdm=indent "缩进折叠 其他可选设置 marker 默认使用 /*{{{*/和 /*}}}*/标记折叠 expr 表达式等等 
+set wrap 
+"set fdm=indent "缩进折叠 其他可选设置 marker 默认使用 /*{{{*/和 /*}}}*/标记折叠 expr 表达式等等 
 "zM close all flods, zR reopen all flods, za open a flod,  zc close a flod ,when open a flod:  ]z折叠尾部 [z 折叠首部 zr打开
 "zj move to next flod ,zk move to previous flod
 "@see more: http://vim.wikia.com/wiki/Folding
