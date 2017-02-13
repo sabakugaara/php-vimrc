@@ -39,6 +39,7 @@ php-vimrc
 - html5.vim html5 的标签支持
 - nerdcommenter  输入注释的工具
 - loremipsum 仅仅用于输入一些指定长度的占位符字符串
+- auto-pairs 自动成对输入 `() []` 等一些常见符号
 
 
 
