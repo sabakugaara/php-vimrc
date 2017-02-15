@@ -70,6 +70,10 @@ map <Leader>rj :Codi javascript<CR>
 map <Leader>rp :Codi php<CR>
 map <Leader>ag :GrepperAg 
 
+" 复制当前编辑文件路径到系统粘贴板 @see [insert current filename tip](http://vim.wikia.com/wiki/Insert_current_filename)
+nmap <Leader>cp :let @+ = expand("%:p")<CR>
+" 复制当前编辑文件路径到 vim 粘贴板，通过 y/p 操作
+"nmap <Leader>cp :let @" = expand("%:p:h")<CR>
 
 """""""""""""" brew install vim 7.4 """"""""""""""""""
 " ,v = Paste
@@ -92,8 +96,8 @@ map <Leader>c "+y
 " 删除当前编辑的文件
 nnoremap rm :call delete(expand('%')) \| bdelete!<CR>
 
-
-set wrap 
+"关闭自动换行
+"set wrap 
 "set fdm=indent "缩进折叠 其他可选设置 marker 默认使用 /*{{{*/和 /*}}}*/标记折叠 expr 表达式等等 
 "zM close all flods, zR reopen all flods, za open a flod,  zc close a flod ,when open a flod:  ]z折叠尾部 [z 折叠首部 zr打开
 "zj move to next flod ,zk move to previous flod
