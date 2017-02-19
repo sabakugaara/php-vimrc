@@ -40,7 +40,8 @@ php-vimrc
 - nerdcommenter  输入注释的工具
 - loremipsum 仅仅用于输入一些指定长度的占位符字符串
 - auto-pairs 自动成对输入 `() []` 等一些常见符号
+- vimshell
+- vimproc vimshell 的依赖，安装代码后，需要进入插件目录编译，`make`
 
 
 
-TODO vim terminal 结合
