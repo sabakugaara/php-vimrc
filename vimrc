@@ -93,8 +93,8 @@ map <Leader>c "+y
 " mvim just need this
 "set clipboard=unnamed
 
-" 删除当前编辑的文件
-nnoremap rm :call delete(expand('%')) \| bdelete!<CR>
+" 删除当前编辑的文件，FxxK 非常容易误操作
+"nnoremap rm :call delete(expand('%')) \| bdelete!<CR>
 
 "关闭自动换行
 "set wrap 
