@@ -13,6 +13,7 @@ command! -nargs=* -complete=file -bang Rename call Rename(<q-args>, '<bang>')
 function! Rename(name, bang)
 	let l:name    = a:name
 	let l:oldfile = expand('%:p')
+    let l:curpath = expand("%:h") . "/"
 
 	if bufexists(fnamemodify(l:name, ':p'))
 		if (a:bang ==# '!')
@@ -28,7 +29,7 @@ function! Rename(name, bang)
 	let l:status = 1
 
 	let v:errmsg = ''
-	silent! exe 'saveas' . a:bang . ' ' . l:name
+	silent! exe 'saveas' . a:bang . ' ' . fnameescape(l:curpath . a:name)
 
 	if v:errmsg =~# '^$\|^E329'
 		let l:lastbufnr = bufnr('$')

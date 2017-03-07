@@ -89,3 +89,6 @@
 [submodule "bundle/vimproc"]
 	path = bundle/vimproc
 	url = https://github.com/Shougo/vimproc.vim
+[submodule "bundle/vim-lexical"]
+	path = bundle/vim-lexical
+	url = https://github.com/reedes/vim-lexical.git

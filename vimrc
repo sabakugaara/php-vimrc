@@ -28,6 +28,7 @@ set scrolloff=3
 set cursorcolumn " 高亮光标所在列
 set cursorline " 高亮光标所在行
 set wildchar=<Tab> wildmenu wildmode=full
+set mouse=a
 
 "使用 / 搜索选中的任意单词
 vnorem / y/<c-r>"<cr>   
