@@ -92,3 +92,6 @@
 [submodule "bundle/vim-lexical"]
 	path = bundle/vim-lexical
 	url = https://github.com/reedes/vim-lexical.git
+[submodule "bundle/bufexplorer"]
+	path = bundle/bufexplorer
+	url = https://github.com/jlanzarotta/bufexplorer.git
