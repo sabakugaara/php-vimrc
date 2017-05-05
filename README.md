@@ -42,7 +42,7 @@ php-vimrc
 - auto-pairs 自动成对输入 `() []` 等一些常见符号
 - vimshell
 - vimproc vimshell 的依赖，安装代码后，需要进入插件目录编译，`make`
-- vim-lexical 字典提示速度很慢
+- vim-snippets 提供各个语言常用的 snippets
 
 
 
