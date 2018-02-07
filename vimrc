@@ -33,6 +33,8 @@ set mouse=a
 "使用 / 搜索选中的任意单词
 vnorem / y/<c-r>"<cr>   
 set iskeyword+=_,$,@,%,#,- " 带有如下符号的单词不要被换行分割
+"imap <leader>, <ESC><Right>
+
 
 
 "在有折行的情况下，不再需要 gj gk来上下移动
@@ -70,6 +72,9 @@ map <Leader>j :! node  %<CR>
 map <Leader>rj :Codi javascript<CR>
 map <Leader>rp :Codi php<CR>
 map <Leader>ag :GrepperAg 
+map <Leader>h :%!xxd<CR>
+map <Leader>hr :%!xxd -r<CR>
+
 
 " 复制当前编辑文件路径到系统粘贴板 @see [insert current filename tip](http://vim.wikia.com/wiki/Insert_current_filename)
 nmap <Leader>cp :let @+ = expand("%:p")<CR>
@@ -81,6 +86,7 @@ nmap <Leader>cp :let @+ = expand("%:p")<CR>
 map <Leader>v "+gP
 " ,c = Copy
 map <Leader>c "+y
+
 """""""""""""" brew install vim 7.4 """"""""""""""""""
 
 """""""""""" mac default vim 7.3"""""""""""""""""""""
@@ -140,3 +146,10 @@ endfunction
 "Bind the BufSel() function to a user-command
 "command! -nargs=1 Bs :call BufSel("<args>")
 "map <leader>bs :buffers<CR>:Bs<Space>
+
+"""""""""""""""""""
+" TIPS
+"""""""""""""""""""
+
+" 替换换行符问题
+":%s/<Ctrl-V><Ctrl-M>/\r/g
