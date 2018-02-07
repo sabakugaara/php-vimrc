@@ -98,3 +98,15 @@
 [submodule "bundle/vim-snippets"]
 	path = bundle/vim-snippets
 	url = git@github.com:honza/vim-snippets.git
+[submodule "bundle/colorschemes"]
+	path = bundle/colorschemes
+	url = https://github.com/flazz/vim-colorschemes.git
+[submodule "bundle/python-syntax"]
+	path = bundle/python-syntax
+	url = git@github.com:hdima/python-syntax.git
+[submodule "bundle/vim-lastplace"]
+	path = bundle/vim-lastplace
+	url = https://github.com/dietsche/vim-lastplace.git
+[submodule "bundle/vim-auto-save"]
+	path = bundle/vim-auto-save
+	url = git@github.com:907th/vim-auto-save.git

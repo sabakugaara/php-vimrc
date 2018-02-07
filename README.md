@@ -31,7 +31,7 @@ php-vimrc
 - vim-surround 快捷的双引号操作
 - vim-tlib 一个 vim 基础库
 - vim-ale 异步语法检查
-  - eslint js 检测 `npm i eslint -g`
+  - eslint js 检测 `npm i eslint -g`，默认不适用全局的 eslint `ale_javascript_eslint_use_global=0`
   - tidy html 检测 手动下载：http://binaries.html-tidy.org/
   - jsonlint 
 - vim-grepper 异步文件搜索
