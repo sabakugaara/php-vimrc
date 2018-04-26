@@ -3,7 +3,8 @@ let g:ale_linters = {
 \   'typescript': ['tslint'],
 \   'json': ['jsonlint'],
 \   'html': ['htmlhint'],
-\   'sh': ['shellcheck']
+\   'sh': ['shellcheck'],
+\   'scss': ['prettier']
 \}
 
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
