@@ -43,6 +43,7 @@ php-vimrc
 - vimshell
 - vimproc vimshell 的依赖，安装代码后，需要进入插件目录编译，`make`
 - vim-snippets 提供各个语言常用的 snippets
+- vim-fixmyjs eslint 自动修复
 
 
 
