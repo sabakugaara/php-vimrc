@@ -110,3 +110,6 @@
 [submodule "bundle/vim-auto-save"]
 	path = bundle/vim-auto-save
 	url = git@github.com:907th/vim-auto-save.git
+[submodule "bundle/vim-fixmyjs"]
+	path = bundle/vim-fixmyjs
+	url = git@github.com:ruanyl/vim-fixmyjs.git

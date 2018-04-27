@@ -46,6 +46,9 @@ nmap <leader>ss :source ~/.vimrc<CR>
 "noremap <CR> o<ESC>
 noremap <leader>. :nohlsearch<CR>
 
+" fixmyjs
+noremap <Leader><Leader>f :Fixmyjs<CR>
+
 
 set background=dark
 "colorscheme solarized
