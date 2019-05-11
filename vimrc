@@ -2,21 +2,21 @@ execute pathogen#infect()
 syntax on
 au BufRead,BufNewFile *.json set filetype=json
 au BufRead,BufNewFile *.ts set filetype=typescript
-filetype plugin indent on
-set nocompatible  "去掉讨厌的有关vi一致性模式，避免以前版本的一些bug和局限
+" filetype plugin indent on
+"set nocompatible  "去掉讨厌的有关vi一致性模式，避免以前版本的一些bug和局限
 let mapleader = ","
-set backspace=indent,eol,start " 删除键能删除空行和 tab 缩进
+"set backspace=indent,eol,start " 删除键能删除空行和 tab 缩进
 set expandtab " tab 转化为空格
 set tabstop=4 
 set shiftwidth=4 " << 和 >> 缩进时的列数
 set softtabstop=4 " tab 
-set autoindent
+" set autoindent
 set smartindent
 set textwidth=180
 set number
 set showcmd
-set hlsearch
-set incsearch
+"set hlsearch
+"set incsearch
 set ignorecase
 set smartcase
 set encoding=utf-8
@@ -29,6 +29,7 @@ set cursorcolumn " 高亮光标所在列
 set cursorline " 高亮光标所在行
 set wildchar=<Tab> wildmenu wildmode=full
 set mouse=a
+
 
 "使用 / 搜索选中的任意单词
 vnorem / y/<c-r>"<cr>   
@@ -86,15 +87,14 @@ nmap <Leader>cp :let @+ = expand("%:p")<CR>
 
 """""""""""""" brew install vim 7.4 """"""""""""""""""
 " ,v = Paste
-map <Leader>v "+gP
+map <Leader>v "+p
 " ,c = Copy
 map <Leader>c "+y
 
 """""""""""""" brew install vim 7.4 """"""""""""""""""
 
-"""""""""""" mac default vim 7.3"""""""""""""""""""""
-" just copy select line brew install vim 7.4 fix this problem
-"map <leader>c :w !pbcopy<CR><CR>
+"""""""""""" mac default vim 7.3 & 8.0"""""""""""""""""""""
+"map <leader>c :w !pbcopy<CR>
 "this work on mac
 "map <Leader>v :r !pbpaste<CR>
 
