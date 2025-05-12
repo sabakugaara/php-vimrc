@@ -4,3 +4,15 @@ snippet class
 	  
 	  }
 	}	
+snippet desc
+	describe('${1}', function() {
+	  ${2}
+	});
+snippet it
+	it('${1}', () => {
+	  ${2}  
+	});
+snippet for
+	for(let index = 0; index < ${1}.length; index++) {
+	  ${2}
+	}

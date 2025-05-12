@@ -156,3 +156,6 @@ endfunction
 
 " 替换换行符问题
 ":%s/<Ctrl-V><Ctrl-M>/\r/g
+
+set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<,space:␣
+set nolist
